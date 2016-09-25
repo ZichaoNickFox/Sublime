@@ -125,10 +125,6 @@
 		]
 	},
 
-	// TODO:map :q to quit
-	// TODO:map :w to save
-	// TODO:set jedi unselect after completation
-
 	// build system
 	{// use build view plugin
 		"keys":["ctrl+b"],
@@ -136,5 +132,26 @@
 		"context":[
 			{"key":"build_fake", "operator":"equal", "operand":true}
 		]
+	},
+	{
+		"keys":["n"],
+		"command":"next_result",
+		"context":[
+			{"key": "setting.command_mode", "operand": true},
+			{"key":"selector", "operator":"equal", "operand":"text.plain"},
+		]
+	},
+	{
+		"keys":["N"],
+		"command":"prev_result",
+		"context":[
+			{"key": "setting.command_mode", "operand": true},
+			{"key":"selector", "operator":"equal", "operand":"text.plain"},
+		]
+	},
+	// view tree
+	{// toggle view tree
+		"keys":["ctrl+\\"],
+		"command":"toggle_side_bar"
 	}
 ]

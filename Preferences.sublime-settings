@@ -4,11 +4,7 @@
 	"highlight_line": true,
 	"ignored_packages":
 	[
-		"Edit Command Palette",
 		"JumpTo",
-		"Markdown Preview",
-		"MarkdownTOC",
-		"Open URL",
 		"Vintage"
 	],
 	"inactive_panes_dim_strength": 0.15,
