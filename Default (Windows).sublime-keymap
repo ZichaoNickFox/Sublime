@@ -1,0 +1,140 @@
+[
+	// vim commands
+	{// 取消 <C-c>
+		"keys": ["ctrl+c"],
+		"command": "press_key", 
+		"args":{"key":"<esc>"},
+		"context" :[
+			{"key":"vi_mode_visual", "operator":"equal", "operand":false}
+		]
+	},
+	{// 命令行 <;>
+		"keys":[";"],
+		"command":"press_key",
+		"args": {"key": ":"}, 
+		"context": [
+			{"key": "vi_command_mode_aware"},
+		]
+	},
+	{// 向下半屏 shift+j
+		"keys":["J"],
+		"command":"press_key",
+		"args": {"key": "<C-d>"}, 
+		"context": [
+			{"key": "vi_command_mode_aware"},
+		]
+	},
+	{// 向上半屏 shift+j
+		"keys":["K"],
+		"command":"press_key",
+		"args": {"key": "<C-u>"}, 
+		"context": [
+			{"key": "vi_command_mode_aware"},
+		]
+	},
+
+	// sublime commands
+	{// 跳转到左边的group
+		"keys":["H"],
+		"command":"travel_to_pane",
+		"args":{"direction":"left"},
+		"context":[
+			{"key":"vi_command_mode_aware"}
+		]
+	},
+	{// 跳转到右边的group
+		"keys":["L"],
+		"command":"travel_to_pane",
+		"args":{"direction":"right"},
+		"context":[
+			{"key":"vi_command_mode_aware"}
+		]
+	},
+	{// 移动到左边的group
+		"keys":["ctrl+h"],
+		"command":"carry_file_to_pane",
+		"args":{"direction":"left"},
+		"context":[
+			{"key":"vi_command_mode_aware"}
+		]
+	},
+	{// 移动到右边的group
+		"keys":["ctrl+l"],
+		"command":"carry_file_to_pane",
+		"args":{"direction":"right"},
+		"context":[
+			{"key":"vi_command_mode_aware"}
+		]
+	},
+	{// 注释
+		"keys":["-"],
+		"command":"toggle_comment",
+		"context": [
+			{"key": "vi_command_mode_aware"},
+		]
+	},
+	{// 打开当前文件夹
+		"keys": ["ctrl+alt+d"],
+		"command": "open_dir", 
+	    "args": {
+	    	"dir": "$file_path",
+	    	"file": "$file_name"
+	    } 
+	},
+	{// 编译
+		"keys":["ctrl+b"],
+		"command":"build",
+	},
+	{// 打开控制台
+		"keys":["`"],
+		"command":"show_panel",
+		"args":{
+			"panel":"console"
+		},
+        "context":[
+			{"key":"vi_command_mode_aware"}
+        ]
+	},
+
+
+	// easymotion commands
+	// {// 逗号 easymotion
+        // "keys": [",", "<character>"], 
+        // "command": "easy_motion",
+        // "args": {"select_text": false},
+        // "context":[
+			// {"key":"vi_command_mode_aware"}
+        // ]
+    // },
+
+
+
+    // markdown commands
+	{// alt+m markdown preview 
+		"keys": ["alt+m"],
+		"command": "markdown_preview", 
+		"args": { "target": "browser"} 
+	},
+
+	// open-url
+	{// enter open-url
+		"keys" :["enter"],
+		"command":"open_url",
+		"context":[
+			{"key":"vi_command_mode_aware"}
+		]
+	},
+
+	// TODO:map :q to quit
+	// TODO:map :w to save
+	// TODO:set jedi unselect after completation
+
+	// build system
+	{// use build view plugin
+		"keys":["ctrl+b"],
+		"command":"build",
+		"context":[
+			{"key":"build_fake", "operator":"equal", "operand":true}
+		]
+	}
+]

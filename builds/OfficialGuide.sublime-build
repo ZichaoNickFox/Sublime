@@ -1,0 +1,3 @@
+{
+	"shell_cmd":"UnrealBuildTool.exe OfficialGuide Development Win64 -project=\"D:/Unreal4Projects/OfficialGuide/OfficialGuide.uproject\" -editorrecompile -progress -noubtmakefiles -NoHotReloadFromIDE"
+}

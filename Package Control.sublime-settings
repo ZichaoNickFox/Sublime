@@ -1,0 +1,19 @@
+{
+	"bootstrapped": true,
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"AdvancedNewFile",
+		"Edit Command Palette",
+		"InactivePanes",
+		"Markdown Preview",
+		"MarkdownEditing",
+		"Open URL",
+		"Origami",
+		"Package Control",
+		"SublimeREPL",
+		"Vintageous"
+	]
+}
